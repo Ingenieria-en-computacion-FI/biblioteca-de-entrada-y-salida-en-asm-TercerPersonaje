@@ -7,13 +7,12 @@ SECTION .data
 msg_int db "Ingrese un numero:",10,0
 msg_char db "Ingrese un caracter:",10,0
 msg_str db "Ingrese una cadena:",10,0
-
 msg_result db "Resultados:",10,0
 
+SECTION .bss
 buffer resb 64
 
 SECTION .text
-
 _start:
 
     ; -------------------------
@@ -27,7 +26,6 @@ _start:
     call print_int
     call newline
 
-
     ; -------------------------
     ; pedir caracter
     ; -------------------------
@@ -38,7 +36,6 @@ _start:
     call scan_char
     call print_char
     call newline
-
 
     ; -------------------------
     ; pedir cadena
@@ -57,7 +54,6 @@ _start:
     mov eax, buffer
     call print_string
     call newline
-
 
     ; -------------------------
     ; salir
