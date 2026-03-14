@@ -5,12 +5,13 @@ SECTION .text
 
 newline:
 
-    push ebp
-    mov ebp, esp
+push ebp
+mov ebp, esp
 
-    ; TODO:
-    ; imprimir '\n'
+; imprimir '\n'
+mov eax, 10
+call print_char
 
-    mov esp, ebp
-    pop ebp
-    ret
+mov esp, ebp
+pop ebp
+ret
