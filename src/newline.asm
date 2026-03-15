@@ -5,13 +5,13 @@ SECTION .text
 
 newline:
 
-push ebp
-mov ebp, esp
+    push ebp
+    mov ebp, esp
 
-; imprimir '\n'
-mov eax, 10
-call print_char
+    ; imprimir '\n'
+    mov al, 10
+    call print_char
 
-mov esp, ebp
-pop ebp
-ret
+    mov esp, ebp
+    pop ebp
+    ret
