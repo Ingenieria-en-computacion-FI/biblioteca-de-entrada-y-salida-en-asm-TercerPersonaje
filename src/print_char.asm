@@ -1,5 +1,5 @@
 SECTION .bss
-char_buffer resb1
+char_buffer resb 1
 
 SECTION .text
 global print_char
