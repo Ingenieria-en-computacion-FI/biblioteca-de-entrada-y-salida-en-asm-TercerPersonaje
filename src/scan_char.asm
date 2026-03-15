@@ -26,7 +26,7 @@ scan_char:
     int 0x80
 
     ; 3. devolverlo en AL
-    mov al, [char_buffers]
+    mov al, [char_buffer]
 
     mov esp, ebp
     pop ebp
