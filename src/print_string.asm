@@ -17,7 +17,7 @@ print_string:
     mov ecx, eax 
     xor edx, edx 
 
-    ; 1. calcular longitud
+.count:
     cmp byte [ecx], 0
     je .print
 
@@ -25,6 +25,7 @@ print_string:
     inc edx
     jmp .count
 
+.print:
     ; 2. syscall write
     mov eax, 4
     mov ebx, 1
